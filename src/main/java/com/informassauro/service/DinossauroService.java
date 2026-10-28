@@ -24,4 +24,12 @@ public class DinossauroService {
         return dinossauroRepository.findById(id).orElseThrow(() -> new RuntimeException("Dinossauro não encontrado"));
     }
 
+    public List<Dinossauro> carnivoros(){
+        return dinossauroRepository.findAllByDieta("Carnívoro");
+    }  public List<Dinossauro> herbivoros(){
+        return dinossauroRepository.findAllByDieta("Herbívoro");
+    }  public List<Dinossauro> onivoros(){
+        return dinossauroRepository.findAllByDieta("Onívoro");
+    }
+
 }

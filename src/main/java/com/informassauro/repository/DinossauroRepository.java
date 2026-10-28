@@ -8,5 +8,5 @@ import java.util.List;
 
 @Repository
 public interface DinossauroRepository extends JpaRepository<Dinossauro, Long> {
-
+    List<Dinossauro> findAllByDieta(String dieta);
 }
